@@ -17,8 +17,6 @@ def get_receiver_top_orders(heights):
         else:
             stack.append(idx)
             stack2.append(heights[i])
-
-
     return stack
 
 
