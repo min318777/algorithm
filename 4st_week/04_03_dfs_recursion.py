@@ -13,8 +13,20 @@ graph = {
 }
 visited = []
 
+# 1. 시작 노드인 1부터 탐색한다.
+# 2. 현재 방문한 노드를 visited_array에 추가한다.
+# 3. 현재 방문한 노드와 인접한 노드 중 방문하지 않은 노드를 방문한다.
+# 4. 재귀함수방법으로 구현 -> 별로 좋지 않다.
 
 def dfs_recursion(adjacent_graph, cur_node, visited_array):
+
+    visited_array.append(cur_node)
+    print("cur_node = ", cur_node, "adjacent_graph = ", adjacent_graph[cur_node])
+    for adjacent_node in adjacent_graph[cur_node]:
+        if adjacent_node not in visited_array:
+            dfs_recursion(adjacent_graph, adjacent_node, visited_array)
+
+
 
     return
 
