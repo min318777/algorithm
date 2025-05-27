@@ -29,7 +29,7 @@ def bfs_queue(adj_graph, start_node):
             if adj_node not in visited:
                 queue.append(adj_node)
 
-    result = 0
+    
     return visited
 
 
